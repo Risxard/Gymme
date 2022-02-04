@@ -11,22 +11,29 @@ body {
     overflow-x: hidden;
 }
 
-::-webkit-scrollbar{
+.br1{
+    display: none;
+}
+
+::-webkit-scrollbar {
     width: 13px;
     height: 13px;
-    }
-    ::-webkit-scrollbar-thumb{
+}
+
+::-webkit-scrollbar-thumb {
     background: #B3AFB3;
     border-radius: 0px;
-    }
-    ::-webkit-scrollbar-thumb:hover{
+}
+
+::-webkit-scrollbar-thumb:hover {
     background: #7A7A7A;
-    }
-    ::-webkit-scrollbar-track{
+}
+
+::-webkit-scrollbar-track {
     background: #F0F0F0;
     border-radius: 0px;
     box-shadow: inset 0px 0px 0px 0px #F0F0F0;
-    }
+}
 
 /* HEADER STYLE*/
 
@@ -35,6 +42,7 @@ header {
     width: 100vw;
     height: 100vh;
     min-height: 600px;
+    overflow: hidden;
 
     display: flex;
     align-content: center;
@@ -64,6 +72,7 @@ header h2 {
 }
 
 header h3 {
+
     margin-top: 32px;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
@@ -191,9 +200,11 @@ nav span {
 
 .header-conteudo {
     display: flex;
-    width: 1030px;
-    height: 100vh;
+    width: 1050px;
+    height: 100%;
 
+    overflow: hidden;
+    min-height: 600px;
     top: 0px;
 
     justify-content: right;
@@ -210,8 +221,8 @@ nav span {
 
     padding-left: clamp(3rem, 14vw, 20rem);
 
+    align-self: center;
 
-    top: 30%;
     left: 0;
     width: auto;
     height: auto;
@@ -220,22 +231,20 @@ nav span {
 }
 
 .hero-image {
-    display: fixed;
-    background-position: right;
     width: 70%;
-    height: 100vh;
-
-    min-width: 50%;
-
-    min-width: 70%;
+    height: 100%;
 
 
-    top: 0;
-    background-size: auto 100vh;
-    background-image: url(/CSS/IMGS/Hero.png);
-    background-repeat: no-repeat;
+    display: flex;
+    justify-content: right;
+    overflow: hidden;
 }
 
+.hero-image img {
+
+    width: auto;
+    height: 100%;
+}
 
 
 .intro-container button {
@@ -293,25 +302,14 @@ nav span {
 }
 
 
-
-
-
-
-
-
-
-
-
 @media (max-width: 660px) {
 
     .intro-container h1 {
-        line-height: 40px;
-        flex: none;
-        order: 0;
-        align-self: stretch;
-        flex-grow: 0;
 
+        font-style: normal;
+        font-weight: 800;
         font-size: 40px;
+        line-height: 40px;
     }
 
     .intro-container h2 {
@@ -342,6 +340,10 @@ nav span {
         display: inherit;
         padding-left: 20px;
         width: 400px;
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
     }
 }
 
@@ -393,6 +395,16 @@ nav span {
     }
 }
 
+@media (max-width: 430px){
+    .intro-container h3 .br2{
+        display: none;
+    }
+    .intro-container h3 .br1{
+        display: inherit;
+    }
+}
+
+
 
 
 /* MAIN CONTAINER */
@@ -419,7 +431,7 @@ main {
 
 .OurMission-Conteudo {
     width: 55vw;
-    height: 900px;
+    height: auto;
 
     display: flex;
     flex-direction: column;
@@ -486,4 +498,48 @@ main {
     font-weight: 800;
     font-size: 14px;
     line-height: 18px;
+}
+
+
+
+/***Traning programs***/
+
+.Training-container {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: auto;
+}
+
+.TrainingH1-Container {
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.TrainingH1-Container h1 {
+    position: absolute;
+    margin-left: 5rem;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.TrainingH1-Container strong {
+    color: #4AE290;
+}
+
+/**Training Slider**/
+
+.TrainingSlider-Container {
+    width: 100vw;
+    height: 350px;
 }
