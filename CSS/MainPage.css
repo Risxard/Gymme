@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+html {
+    width: 100%;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,39 +13,20 @@
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
 }
 
-.br1{
+.br1 {
     display: none;
 }
 
-::-webkit-scrollbar {
-    width: 13px;
-    height: 13px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #B3AFB3;
-    border-radius: 0px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #7A7A7A;
-}
-
-::-webkit-scrollbar-track {
-    background: #F0F0F0;
-    border-radius: 0px;
-    box-shadow: inset 0px 0px 0px 0px #F0F0F0;
-}
 
 /* HEADER STYLE*/
 
 header {
     top: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     min-height: 600px;
     overflow: hidden;
@@ -92,10 +79,11 @@ nav {
     position: absolute;
     align-self: center;
     justify-content: space-between;
+
     padding: 20px 5%;
     display: flex;
     z-index: 10;
-    width: 100vw;
+    width: 100%;
     height: auto;
 }
 
@@ -395,11 +383,12 @@ nav span {
     }
 }
 
-@media (max-width: 430px){
-    .intro-container h3 .br2{
+@media (max-width: 430px) {
+    .intro-container h3 .br2 {
         display: none;
     }
-    .intro-container h3 .br1{
+
+    .intro-container h3 .br1 {
         display: inherit;
     }
 }
@@ -426,11 +415,11 @@ main {
     align-items: center;
     justify-content: center;
 
-    padding-top: 10rem;
+    padding-top: 8rem;
 }
 
 .OurMission-Conteudo {
-    width: 55vw;
+    width: 53%;
     height: auto;
 
     display: flex;
@@ -439,7 +428,7 @@ main {
 }
 
 .H1-Container {
-    width: 100%;
+    width: auto;
 
 
     display: flex;
@@ -448,8 +437,7 @@ main {
 }
 
 .H1-Container h1 {
-    position: absolute;
-    margin-left: 5rem;
+    margin-left: -80px;
 
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -477,14 +465,19 @@ main {
     margin-bottom: 32px;
 }
 
-.JoinNow-Container {
+.JoinNow-btn {
+    display: flex;
+
+    align-content: center;
+
+
     width: 118px;
     height: 52px;
 
 
 }
 
-.JoinNow-Container a {
+.JoinNow-btn a {
     text-decoration: none;
 
     display: flex;
@@ -500,6 +493,89 @@ main {
     line-height: 18px;
 }
 
+/*MEDIA QUERY OUR MISSION*/
+
+@media (max-width: 900px) {
+
+
+    .OurMission-Conteudo {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .H1-Container svg {
+        width: 150px;
+        height: 105px;
+    }
+
+
+    .H1-Container h1 {
+        margin-left: -80px;
+
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .H1-Container strong {
+        color: #4AE290;
+    }
+
+
+    .OurMission-texto p {
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 32px;
+
+        color: #595962;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+
+    .OurMission-Conteudo {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .H1-Container svg {
+        width: 100px;
+        height: 80px;
+    }
+
+
+    .H1-Container h1 {
+        margin-left: -50px;
+
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .H1-Container strong {
+        color: #4AE290;
+    }
+
+
+    .OurMission-texto p {
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 32px;
+
+        color: #595962;
+    }
+
+}
 
 
 /***Traning programs***/
@@ -508,24 +584,27 @@ main {
     margin-top: 10rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    width: 100vw;
+    width: 100%;
     height: auto;
 }
 
 .TrainingH1-Container {
-    width: 30vw;
+    margin-bottom: 10rem;
+    width: 540px;
+    height: 120px;
     display: flex;
-    align-items: center;
     flex-direction: row;
+    align-self: center;
+}
+
+.TrainingH1-Container svg {
+    position: absolute;
+    align-self: center;
 }
 
 .TrainingH1-Container h1 {
-    position: absolute;
-    margin-left: 5rem;
-
+    margin-left: 70px;
+    align-self: center;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 800;
@@ -537,9 +616,684 @@ main {
     color: #4AE290;
 }
 
-/**Training Slider**/
 
-.TrainingSlider-Container {
-    width: 100vw;
-    height: 350px;
+
+/*MEDIA QUERY Training*/
+
+@media (max-width: 650px) {
+    .TrainingH1-Container h1 {
+        margin-left: 50px;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .TrainingH1-Container {
+        width: 351px;
+        height: 80px;
+    }
+
+    .TrainingH1-Container svg {
+        align-self: center;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 370px) {
+    .TrainingH1-Container h1 {
+        margin-left: 40px;
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .TrainingH1-Container {
+        width: 320px;
+        height: 80px;
+    }
+
+    .TrainingH1-Container svg {
+        align-self: center;
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
+
+
+
+
+/*Pricing Plan*/
+
+.Pricing-container {
+    margin-bottom: 10rem;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.PricingH1-Container {
+    margin-bottom: 10rem;
+    width: 540px;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+}
+
+.PricingH1-Container svg {
+    position: absolute;
+    margin-left: -160px;
+}
+
+.PricingH1-Container h1 {
+    align-self: center;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.PricingH1-Container strong {
+    color: #4AE290;
+}
+
+
+
+
+
+.pricing-cards-container {
+
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    display: flex;
+    width: 100%;
+    height: 555px;
+}
+
+.pricing-cards-container h1 {
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1px;
+}
+
+.pricing-cards-container h1 strong {
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.PricingH1-card-container {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+}
+
+.PricingH1-card-container p {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+
+
+
+    color: #595962;
+}
+
+
+
+.BasicCard {
+    display: flex;
+    justify-content: center;
+
+    width: 405px;
+    height: 513px;
+    background: rgba(19, 19, 22, 0.05);
+    border-radius: 2px;
+}
+
+.EliteCard {
+    display: flex;
+    justify-content: center;
+
+    width: 405px;
+    height: 513px;
+    background: rgba(19, 19, 22, 0.05);
+    border-radius: 2px;
+    display: flex;
+}
+
+.PremiumCard {
+    display: flex;
+    justify-content: center;
+
+    width: 405px;
+    height: 555px;
+    background: #131316;
+    border-radius: 2px;
+}
+
+
+
+.basic-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    align-items: center;
+}
+
+.premium-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    align-items: center;
+}
+
+.elite-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    align-items: center;
+}
+
+.Card-Tag-Container {
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+
+}
+
+.Card-Tag-Container h3 {
+    width: auto;
+    height: 26px;
+    padding: 4px 14px;
+
+    background: #131316;
+    border-radius: 1px;
+
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+
+
+}
+
+
+
+.beneficios-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.beneficios-items {
+    display: flex;
+    flex-direction: column;
+    align-content: left;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.beneficios {
+    display: flex;
+    flex-direction: row;
+}
+
+.beneficios img {
+    margin-right: 10px;
+}
+
+.beneficios p {
+    text-align: left;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+
+    color: #131316;
+}
+
+
+.PricingFlexCard button {
+    cursor: pointer;
+    width: 159px;
+    height: 46px;
+
+    margin: 32px;
+    align-self: center;
+    border: 1px solid #131316;
+    box-sizing: border-box;
+    border-radius: 1px;
+
+}
+
+.PricingFlexCard button, text {
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+
+
+.premium-card-container .Card-Tag-Container h3 {
+    width: auto;
+    height: 26px;
+    padding: 4px 14px;
+    color: #131316;
+
+    background: #FFFFFF;
+    border-radius: 1px;
+}
+
+.premium-card-container .Card-Tag-Container p {
+    color: #DEDEE3;
+}
+
+.PremiumCard h1 {
+    color: #FFFFFF;
+}
+
+.PremiumCard p {
+    color: #DEDEE3;
+}
+
+
+.premium-card-container .beneficios-container .beneficios img {
+    filter: invert(100%);
+}
+
+
+
+
+
+
+
+
+
+
+/*MEDIA QUERY Pricing*/
+@media (max-width: 1280px) {
+    .pricing-cards-container {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+}
+
+
+
+@media (max-width: 1024px) {
+    .Card-Tag-Container {
+        margin: 0px 3rem 0px 3rem;
+    }
+
+    .Pricing-container {
+
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .pricing-cards-container {
+        width: 78%;
+        height: 994px;
+        align-self: center;
+        flex-direction: column;
+    }
+
+    .basic-card-container {
+
+        flex-direction: row;
+    }
+
+    .BasicCard {
+        width: 100%;
+        height: 268px;
+        background: rgba(19, 19, 22, 0.05);
+        border-radius: 2px;
+    }
+
+    .premium-card-container {
+        flex-direction: row;
+    }
+
+    .PremiumCard {
+        flex-direction: row;
+        width: 100%;
+        height: 352px;
+        background: #131316;
+        border-radius: 2px;
+    }
+
+    .EliteCard {
+        width: 100%;
+        height: 35%;
+        background: rgba(19, 19, 22, 0.05);
+        border-radius: 2px;
+    }
+
+
+    .elite-card-container {
+        flex-direction: row;
+    }
+
+
+    .PricingFlexCard button {
+        align-self: inherit;
+        margin: 32px 0px 0px 0px;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 650px) {
+
+    .Card-Tag-Container {
+        margin: 0px 1rem 0px 1rem;
+    }
+
+    .pricing-cards-container {
+        width: 90%;
+        height: 994px;
+        align-self: center;
+        flex-direction: column;
+    }
+
+    .BasicCard {
+        align-self: stretch;
+        width: 100%;
+        height: 38%;
+        background: rgba(19, 19, 22, 0.05);
+        border-radius: 2px;
+    }
+
+    .premium-card-container {
+        flex-direction: row;
+    }
+
+    .PremiumCard {
+        align-self: stretch;
+        flex-direction: row;
+        width: 100%;
+        height: 28%;
+        background: #131316;
+        border-radius: 2px;
+    }
+
+    .elite-card-container {}
+
+    .EliteCard {
+        align-self: stretch;
+        width: 100%;
+        height: 30%;
+        background: rgba(19, 19, 22, 0.05);
+        border-radius: 2px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .beneficios-container img {
+        align-self: center;
+
+        width: 18px;
+        height: 18px;
+    }
+
+    .beneficios-container p {
+
+        font-size: 14px;
+        line-height: 26px;
+
+    }
+
+
+
+    .elite-card-container {
+        gap: 15px;
+    }
+
+    .basic-card-container {
+        gap: 15px;
+    }
+
+    .premium-card-container {
+        gap: 15px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+    .beneficios-container img {
+        align-self: center;
+
+        width: 18px;
+        height: 18px;
+    }
+
+    .beneficios-container p {
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+    .pricing-cards-container {
+        width: 95%;
+        height: 1200px;
+
+    }
+}
+
+@media (max-width: 380px) {
+    Card-Tag-Container {
+        margin: 0px 0.5rem 0px 0.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 650px) {
+    .PricingH1-Container h1 {
+        margin-left: 0px;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .PricingH1-Container {
+        width: 351px;
+        height: 80px;
+    }
+
+    .PricingH1-Container svg {
+
+        align-self: center;
+        width: 80px;
+        height: 80px;
+
+        margin-left: -110px;
+    }
+}
+
+@media (max-width: 370px) {
+    .TrainingH1-Container h1 {
+        margin-left: 40px;
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .TrainingH1-Container {
+        width: 320px;
+        height: 80px;
+    }
+
+    .TrainingH1-Container svg {
+        align-self: center;
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Community section */
+
+.communityText {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0px 20px 30px 20px;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-self: bottom;
+}
+
+
+
+.communitySlider h3 {
+    display: flex;
+    flex-direction: row;
+
+    width: 150px;
+    height: 24px;
+
+    position: relative;
+    align-self: center;
+    text-align: center;
+
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+}
+
+.communitySlider span {
+    margin: 0px 10px 0px 10px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 24px;
+
+    color: #4AE290;
+
+
+}
+
+.communitySlider p {
+
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: 400 normal;
+    font-size: 18px;
+    line-height: 26px;
+
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+.community-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.slider {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    width: 360px;
+    height: 480px;
+}
+
+.Mark {
+    width: 360px;
+    height: 480px;
+    background-repeat: no-repeat;
+    background-image: url(/CSS/Community/1.png);
+}
+
+.Lauren {
+    width: 360px;
+    height: 480px;
+    background-repeat: no-repeat;
+    background-image: url(/CSS/Community/2.png);
+}
+
+.John {
+    width: 360px;
+    height: 480px;
+    background-repeat: no-repeat;
+    background-image: url(/CSS/Community/3.png);
+}
+
+.slick-track {
+    height: 480px;
 }
