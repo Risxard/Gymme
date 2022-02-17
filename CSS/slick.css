@@ -18,6 +18,11 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+.slick-disabled svg{
+    transition: all .3s;
+    opacity: 10%;
+}
+
 .slick-list
 {
     position: relative;

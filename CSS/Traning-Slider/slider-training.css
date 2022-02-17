@@ -4,7 +4,6 @@
 
 
 
-
 .slider-container .prev_arrow{
     cursor: pointer;
     position: absolute;
@@ -18,16 +17,18 @@
     right: 40px;
 }
 
+.slick-disabled svg img{
+    opacity: 1.0;
+}
 
-
-.slider_items img{
+.slider-container .slider_items img{
     width: 100%;
     height: 100%;
     transition: all 0.5s ease;
 
 }
 
-.slider_items {
+.slider-container .slider_items {
     width: 320px;
     height: 350px;
 
@@ -43,7 +44,7 @@
 
 
 
-.slick-center{
+.slider-container .slick-center{
     clip-path: inset(0px 0px 0px 0px);
     transition: all 0.5s ease;
 }
@@ -51,9 +52,8 @@
 .
 
 
-
-
 .slider-container {
+    position: relative;
 
     display: flex;
 
@@ -65,7 +65,7 @@
     margin-bottom: 10rem;
 }
 
-.slider_items h3 {
+.slider-container .slider_items h3 {
 
 
     margin: 20px;
@@ -110,17 +110,17 @@
 }
 
 @media (max-width: 480px) {
-    .slider_items {
+    .slider-container .slider_items {
         width: 220px;
         height: 240px;
     }
 
-    .slider_items .slick-center {
+    .slider-container .slider_items .slick-center {
         clip-path: inset(0px 0px 0px 0px);
 
     }
 
-    .slider_items slick-slide slick-current slick-active slick-center {
+    .slider-container .slider_items slick-slide slick-current slick-active slick-center {
         transition: all 0.5s;
     }
 }
@@ -146,7 +146,7 @@
 
 /* media query size slider*/
 
-.clip-path{
+.slider-container .clip-path{
     clip-path: inset(0px 0px 0px 0px) !important;
 }
 

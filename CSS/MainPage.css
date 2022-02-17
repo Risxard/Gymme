@@ -24,6 +24,7 @@ body {
 
 /* HEADER STYLE*/
 
+
 header {
     top: 0;
     width: 100%;
@@ -666,7 +667,7 @@ main {
 /*Pricing Plan*/
 
 .Pricing-container {
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
     margin-top: 10rem;
     display: flex;
     flex-direction: column;
@@ -675,7 +676,7 @@ main {
 }
 
 .PricingH1-Container {
-    margin-bottom: 10rem;
+    margin-bottom: 9rem;
     width: 540px;
     height: 120px;
     display: flex;
@@ -882,6 +883,10 @@ main {
     color: #131316;
 }
 
+.PricingFlexCard:hover{
+    transition: all .5s;
+    transform: scale(1.05);
+}
 
 .PricingFlexCard button {
     cursor: pointer;
@@ -1021,6 +1026,11 @@ main {
 
 
 @media (max-width: 650px) {
+    .PricingFlexCard:hover{
+        transition: none;
+        transform: none;
+    }
+
 
     .Card-Tag-Container {
         margin: 0px 1rem 0px 1rem;
@@ -1188,22 +1198,90 @@ main {
 
 /* Community section */
 
-.communityText {
+
+
+.communitySlider .prev_arrow {
     position: absolute;
-    left: 0;
     bottom: 0;
-    margin: 0px 20px 30px 20px;
+    left: -26%;
+    cursor: pointer;
+}
 
-
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    align-self: bottom;
+.communitySlider .next_arrow {
+    position: absolute;
+    bottom: 0;
+    left: -20%;
+    cursor: pointer;
 }
 
 
 
-.communitySlider h3 {
+
+
+
+
+
+
+.CommunityH1-Container strong {
+    color: #4AE290;
+}
+
+.CommunityH1-Container h1 {
+
+    position: absolute;
+    left: 70px;
+
+    padding-top: 40px;
+    align-items: top;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.CommunityH1-Container {
+    align-self: top;
+    position: relative;
+    width: 360px;
+    min-width: 360px;
+    height: 480px;
+    margin: 0px 40px 0px 40px;
+
+    padding: 0px 80px 0px 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.CommunityH1-Container svg {
+    position: absolute;
+    left: 0;
+}
+
+
+.TextComm {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 360px;
+    height: auto;
+    padding: 0px 20px 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.CommunityCardSlider {
+    width: 360px;
+    height: 480px;
+}
+
+
+.CommunityCardSlider h3 {
     display: flex;
     flex-direction: row;
 
@@ -1223,7 +1301,7 @@ main {
     color: #FFFFFF;
 }
 
-.communitySlider span {
+.CommunityCardSlider span {
     margin: 0px 10px 0px 10px;
 
     font-family: 'Open Sans', sans-serif;
@@ -1237,34 +1315,55 @@ main {
 
 }
 
-.communitySlider p {
+.CommunityCardSlider p {
 
-    text-align: center;
     font-family: 'Open Sans', sans-serif;
+    text-align: center;
     font-style: italic;
-    font-weight: 400 normal;
+    font-weight: lighter;
     font-size: 18px;
     line-height: 26px;
 
     color: #FFFFFF;
 }
 
-
-
-
-
-
-
-
-
 .community-container {
-    width: 100%;
-    height: auto;
+    position: relative;
+    flex-grow: 0;
+
     display: flex;
     flex-direction: row;
+    margin-bottom: 10rem;
+    height: 480px;
 }
 
-.slider {
+.communitySlider {
+    position: relative;
+    width: 1280px;
+}
+
+.communitySlider .slick-list .slick-track {
+    margin: 0;
+}
+
+.communitySlider .slick-list {
+    align-items: flex-start;
+    width: 1280px;
+}
+
+.communitySlider .slick-slide {
+    width: 360px;
+    height: 480px;
+    margin: 0px 16px;
+}
+
+.communitySlider .slick-center{
+    transition: all .1s;
+    filter: opacity(90%);
+}
+
+
+.Mark, .Lauren, .John {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1272,6 +1371,7 @@ main {
     width: 360px;
     height: 480px;
 }
+
 
 .Mark {
     width: 360px;
@@ -1294,6 +1394,193 @@ main {
     background-image: url(/CSS/Community/3.png);
 }
 
-.slick-track {
-    height: 480px;
+
+
+
+
+
+
+/* Media query community*/
+@media (min-width: 1440px){
+    .communitySlider .slick-list {
+        align-items: flex-start;
+        width: 980px;
+    }
+}
+
+
+
+@media (max-width: 1024px) {
+
+    .CommunityH1-Container {
+        height: 230px;
+        position: relative;
+        align-self: center;
+        margin: 0;
+    }
+
+    .community-container {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .communitySlider {
+        width: 100vw;
+        align-self: center;
+    }
+
+    .communitySlider .prev_arrow {
+        left: inherit;
+        bottom: -120px;
+        right: 100px;
+    }
+
+    .communitySlider .next_arrow {
+        left: inherit;
+        bottom: -120px;
+        right: 30px;
+
+    }
+
+    .communitySlider .slick-list {
+        align-items: flex-start;
+        width: auto;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .Mark, .Lauren, .John {
+        width: 300px;
+        height: 400px;
+        background-size: cover;
+    }
+
+    .communitySlider .slick-slide {
+        width: 300px;
+        height: 400px;
+        margin: 0px 16px;
+    }
+
+    .TextComm {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        width: 300px;
+        height: auto;
+        padding: 0px 20px 30px 20px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .CommunityCardSlider h3 {
+        display: flex;
+        flex-direction: row;
+
+        width: 150px;
+        height: 24px;
+
+        position: relative;
+        align-self: center;
+        text-align: center;
+
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 24px;
+
+        color: #FFFFFF;
+    }
+
+    .CommunityCardSlider span {
+        margin: 0px 10px 0px 10px;
+
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 24px;
+
+        color: #4AE290;
+
+
+    }
+
+    .CommunityCardSlider p {
+
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+        font-style: italic;
+        font-weight: lighter;
+        font-size: 16px;
+        line-height: 24px;
+
+        color: #FFFFFF;
+    }
+
+}
+
+
+
+@media (max-width: 480px) {
+    .CommunityH1-Container {
+        margin-left: 20px;
+        left: 0;
+        width: 245px;
+        height: 80px;
+        padding: 0;
+        position: absolute;
+        align-self: center;
+    }
+
+    .CommunityH1-Container strong {
+        color: #4AE290;
+    }
+
+    .CommunityH1-Container h1 {
+
+        position: absolute;
+        left: 50px;
+
+        padding-top: 23px;
+        align-items: top;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+
+    .CommunityH1-Container svg {
+        position: absolute;
+        left: 0;
+
+        width: 89px;
+        height: 80px;
+    }
+
+
+    .communitySlider .prev_arrow {
+        left:35%;
+        right:50%;
+    }
+
+    .communitySlider .next_arrow {
+        left:50%;
+        right:35%;
+    }
+
+
+    .communitySlider{
+        margin-top: 10rem;
+    }
+    .communitySlider .slick-slide {
+
+        margin: 0px 8px;
+    }
 }
