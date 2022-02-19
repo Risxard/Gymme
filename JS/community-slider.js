@@ -1,7 +1,7 @@
 $(function () {
   $('.center2').slick({
     autoplay:true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 4000,
     centerPadding: '0',
     slidesToShow: 1,
     initialSlide: 0,
