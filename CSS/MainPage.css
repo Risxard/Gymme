@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 html {
+
     width: 100%;
     scroll-behavior: smooth;
     overflow-y: auto;
@@ -235,8 +236,24 @@ nav span {
     height: 100%;
 }
 
+.intro-container a p {
+    text-align: center;
+}
 
-.intro-container button {
+.intro-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+
+    text-decoration: none;
+
+    color: #131316;
+
+    background: #FFFFFF;
+
     cursor: pointer;
     margin-top: 30px;
     width: 159px;
@@ -245,7 +262,7 @@ nav span {
     box-sizing: border-box;
     border-radius: 1px;
 
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -320,7 +337,7 @@ nav span {
         font-size: 20px;
     }
 
-    .intro-container button {
+    .intro-container a {
         width: 129px;
         height: 42px;
     }
@@ -349,7 +366,7 @@ nav span {
         font-size: 18px;
     }
 
-    .intro-container button {
+    .intro-container a {
         width: 125px;
         height: 40px;
     }
@@ -373,7 +390,7 @@ nav span {
         font-size: 17px;
     }
 
-    .intro-container button {
+    .intro-container a {
         width: 125px;
         height: 40px;
     }
@@ -676,11 +693,12 @@ main {
 }
 
 .PricingH1-Container {
-    margin-bottom: 9rem;
+    margin-bottom: 3rem;
     width: 540px;
     height: 120px;
     display: flex;
     flex-direction: row;
+
     justify-content: center;
     align-self: center;
     text-align: center;
@@ -1018,6 +1036,8 @@ main {
         align-self: inherit;
         margin: 32px 0px 0px 0px;
     }
+
+
 }
 
 
@@ -1026,6 +1046,7 @@ main {
 
 
 @media (max-width: 650px) {
+
     .PricingFlexCard:hover {
         transition: none;
         transform: none;
@@ -1109,6 +1130,35 @@ main {
 
 
 @media (max-width: 480px) {
+
+
+    .PricingH1-Container h1 {
+        margin-left: 40px;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .PricingH1-Container {
+        width: 100%;
+        height: 80px;
+
+        justify-content: left;
+        align-self: left;
+        text-align: left;
+    }
+
+    .PricingH1-Container svg {
+
+        align-self: center;
+        width: 80px;
+        height: 80px;
+
+        margin-left: -0px;
+    }
+
+
+
+
     .beneficios-container img {
         align-self: center;
 
@@ -1147,27 +1197,6 @@ main {
 
 
 
-@media (max-width: 650px) {
-    .PricingH1-Container h1 {
-        margin-left: 0px;
-        font-size: 32px;
-        line-height: 40px;
-    }
-
-    .PricingH1-Container {
-        width: 351px;
-        height: 80px;
-    }
-
-    .PricingH1-Container svg {
-
-        align-self: center;
-        width: 80px;
-        height: 80px;
-
-        margin-left: -110px;
-    }
-}
 
 @media (max-width: 370px) {
     .TrainingH1-Container h1 {
@@ -1593,13 +1622,14 @@ main {
 
 
 /*FAQ AREA*/
+
 .Faq-content {
     position: relative;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 708px;
+    width: 768px;
     height: 1157px;
 
     align-self: center;
@@ -1621,21 +1651,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    width: 708px;
+    width: 100%;
     height: auto;
-}
-
-
-.FAQ-accordion p {
-    width: auto;
-
-
-    padding: 0px 0px 0px 0px;
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 26px;
 }
 
 .faqH1-container svg {
@@ -1653,14 +1670,13 @@ main {
     margin-top: 10rem;
 }
 
-.faqH1-container{
+.faqH1-container {
     margin-top: 3rem;
     position: absolute;
     top: 0;
 }
 
 .faqH1-container h1 {
-
 
     padding-top: 40px;
     align-items: top;
@@ -1671,7 +1687,9 @@ main {
     line-height: 50px;
 }
 
-.faq-item {
+.faqItem {
+    cursor: pointer;
+
     overflow: hidden;
     width: 100%;
     height: auto;
@@ -1685,17 +1703,6 @@ main {
     border-radius: 2px;
 }
 
-.faq-item:target .resposta{
-    display: block;
-    transition: all .5s;
-}
-
-.faq-item:target .accordion-link .toshow{
-    display: none;
-}
-.faq-item:target .accordion-link .tohide{
-    display: block;
-}
 
 .FAQ-accordion a {
     list-style: inherit;
@@ -1703,9 +1710,9 @@ main {
     color: inherit;
 }
 
-.faq-item img {
-    position: absolute;
-    padding-right: 20px;
+.faqItem img {
+    margin: 0px 0px 0px 18px;
+
     align-self: center;
     justify-self: center;
 
@@ -1713,19 +1720,68 @@ main {
 }
 
 
+
 .tohide {
     display: none;
-    margin-top: -25px;
 }
+
+.tohide, .toshow {
+    top: 0;
+}
+
+/*FAQ JAVASCRIPT*/
+
+
+
+.faqItem:target .accordion-link .tohide {
+    display: block;
+}
+
+.faqItem:target .accordion-link .toshow {
+    display: none;
+}
+
+
+.faqItem:target .accordion-link .resposta {
+    display: block;
+}
+
+
+
+
+
+
 
 .resposta {
-    
+    width: auto;
+    height: auto;
+    padding-right: 28px;
+
+
+
     display: none;
-    margin-top: 25px;
-    max-width: 95%;
 }
 
-.faq-item h1 {
+.resposta p {
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+
+    padding-top: 16px;
+
+    color: #595962;
+}
+
+
+.faqItem h1 {
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+
 
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -1734,18 +1790,28 @@ main {
     line-height: 28px;
 }
 
+@media (max-width: 1024px) {
+    .Faq-content {
+        width: 620px;
+    }
+}
+
+
+
+
 
 @media (max-width: 768px) {
-    .Faq-content{
+    .Faq-content {
         background: none;
     }
 
-    .faqH1-container{
+    .faqH1-container {
         position: absolute;
         left: 50px;
         margin-top: 100px;
         height: 200px;
     }
+
     .faqH1-container svg {
 
         top: 20px;
@@ -1755,9 +1821,9 @@ main {
         position: absolute;
         display: inherit;
     }
+
     .faqH1-container h1 {
-    
-    
+
         padding-top: 40px;
         align-items: top;
         font-family: 'Inter', sans-serif;
@@ -1767,32 +1833,31 @@ main {
         line-height: 50px;
     }
 
-    .Faq-content{
+    .Faq-content {
         width: 90%;
     }
+
     .FAQ-accordion {
 
         width: 100%;
 
     }
 
-    .tohide , .toshow{
-        align-self: right;
-        margin-right: -20px;
-    }
-    .faq-item{
+
+
+    .faqItem {
         padding: 20px 20px 20px 20px;
     }
 
 
 }
 
-@media (max-width: 480px){
-    .Faq-content{
+@media (max-width: 480px) {
+    .Faq-content {
         width: 97%;
     }
 
-    .faq-item{
+    .faqItem {
         padding: 15px 15px 15px 15px;
     }
 }
@@ -1803,48 +1868,257 @@ main {
 
 
 
-.rodape{
-    position: relative;
-    width: 100%;
+
+
+
+
+
+
+
+
+/* RODAPÉ CONTENT*/
+
+.rodape {
+    width: auto;
     height: auto;
-}
 
-.rdp-conteudo{
-    width: 100%;
-    height: auto%;
-}
+    display: flex;
+    flex-direction: column;
 
-.hero2-image img{
-    position: absolute;
-}
-.hero2-image{
-    position: absolute;
-}
-
-.direitos{
-    position: relative;
-    width: 100%;
-    height: 195px;
     background: #131316;
 }
 
-.rodapeTexto{
-    bottom: 51px;
-    right: 63px;
-    position: absolute;
+
+.footImg img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
 }
 
-.logoDireitos{
+.footImg {
+    margin-top: -80px;
+    width: 500px;
+    height: 618px;
+}
+
+
+.footConteudo {
+
+    align-self: center;
+    position: relative;
+    display: flex;
+
+
+    width: 941px;
+    height: auto;
+
+    min-height: 537px;
+
+    background: #131316;
+}
+
+.footIntro {
     position: absolute;
-    bottom: 51px;
+    right: 0;
+    top: 74px;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 492px;
+    height: 290px;
+}
+
+.footIntro h1 {
+    font-family: Inter;
+    font-style: normal;
+
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 62px;
+
+    color: #FFFFFF;
+}
+
+.footIntro h1 strong {
+    color: #4AE290;
+}
+
+.footIntro p {
+    font-family: Open Sans;
+    font-style: normal;
+
+    font-weight: lighter;
+
+    font-size: 20px;
+    line-height: 32px;
+
+    color: #FFFFFF;
+}
+
+
+.footIntro a {
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    text-decoration: none;
+    width: 159px;
+    height: 46px;
+
+    background: #FFFFFF;
+
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 1px;
+
+
+}
+
+.footIntro a p {
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #131316;
+
+    text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+    .footImg {
+        width: 442px;
+        height: 618px;
+    }
+
+    .footConteudo {
+        width: 100%;
+    }
+
+    .footIntro {
+        width: 471px;
+        height: 290px;
+
+        right: 18px;
+        top: 74px;
+    }
+
+    .footIntro a {
+
+        width: 142px;
+        height: 46px;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .footConteudo {
+        position: relative;
+    }
+
+    .footIntro {
+        top: 170px;
+        left: 30px;
+    }
+
+    .footImg {
+        width: 276px;
+        height: 386px;
+    }
+
+
+    .footIntro {
+        top: 220px;
+        left: 30px;
+
+        gap: 16px;
+        width: 350px;
+        height: 236px;
+    }
+
+    .footIntro h1 {
+        font-family: Inter;
+        font-style: normal;
+
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 40px;
+
+        color: #FFFFFF;
+    }
+
+
+    .footIntro p {
+
+        font-family: Open Sans;
+        font-style: normal;
+
+        font-weight: lighter;
+
+        font-size: 16px;
+        line-height: 26px;
+
+        color: #FFFFFF;
+    }
+}
+
+
+@media (max-width: 400px){
+    .footIntro {
+        top: 220px;
+        left: 10px;
+
+        gap: 16px;
+        width: 330px;
+        height: 236px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.direitos {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px 72px 0px 72px;
+
+    width: 100%;
+    height: 195px;
+    background-color: #131316;
+}
+
+.logoDireitos svg {
     left: 63px;
 }
 
-.logoDireitos svg{
-    left: 63px;
-}
-
-.rodapeTexto p{
+.rodapeTexto p {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -1854,16 +2128,52 @@ main {
     color: #9797A2;
 }
 
-
-
-
-
-
-
-
-
-.rdp-conteudo{
+.direitos {
     width: 100%;
-    height: 537px;
-    background: #131316;
+    height: 159px;
+}
+
+
+@media (max-width: 1024px) {
+
+
+    .direitos {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 45px 0px 45px;
+        width: 100%;
+        height: 195px;
+        background-color: #131316;
+    }
+}
+
+@media (max-width: 768px) {
+    .rodapeTexto {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .direitos {
+        width: 100%;
+        height: 125px;
+    }
+}
+
+@media (max-width: 480px) {
+    .direitos {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 0px 10px 0px 10px;
+
+        width: 100%;
+        height: 125px;
+        background-color: #131316;
+    }
 }

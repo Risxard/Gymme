@@ -1,7 +1,5 @@
 $(function () {
   $('.center2').slick({
-    autoplay:true,
-    autoplaySpeed: 4000,
     centerPadding: '0',
     slidesToShow: 1,
     initialSlide: 0,
@@ -24,6 +22,7 @@ $(function () {
       {
         breakpoint: 768,
         settings: {
+          autoplay:false,
           centerMode: true,
           centerPadding: '0',
           slidesToShow: 1,
